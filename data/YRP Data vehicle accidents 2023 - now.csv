@@ -1,0 +1,69 @@
+ID,Date,Time,Main Street,Main Street 2,Municipality,Intersection,Motorcycle,Age,Gender,Mobility Scooter,Pedestrian,Single Vehicle,Night,Cyclist
+2023_16704,1/14/2023,14:28,McCowan Road,Bur Oak Avenue,Markham,Y,N,75,Female,N,N,N,N,N
+2023_35339,1/30/2023,6:30,9th Line,Bloomington Road,Whitchurch-Stouffville,Y,N,"Adult, Adult","Male, Male",N,N,N,N,N
+2023_87652,3/15/2023,12:49,Highway 48,NA,Whitchurch-Stouffville,N,N,35,Male,N,N,N,N,N
+2023_170962,5/19/2023,23:49,Major MacKenzie Dr W,Jane Street,Vaughan,Y,NA,NA,NA,NA,NA,NA,NA,NA
+2023_175551,5/23/2023,18:11,Pine Valley Drive,Major MacKenzie Dr W,Vaughan,Y,N,20,Male,N,Y,N,N,N
+2023_183025,5/29/2023,7:52,Jane Street,NA,King,Y,Y,Adult,Male,N,N,N,N,N
+2023_189685,6/1/2023,19:21,Pine Valley Drive,NA,Vaughan,N,N,72,Female,N,N,N,N,N
+2023_238781,7/5/2023,12:22,Dudley Avenue,NA,Markham,N,NA,NA,NA,NA,NA,NA,NA,NA
+2023_265277,7/25/2023,22:15,Highway 7,Thornhill Woods Drive,Vaughan,Y,Y,"45, 47","Male, Female",N,N,N,N,N
+2023_269592,7/29/2023,10:23,Keele Street,Sherwood Park Dr,Vaughan,Y,NA,NA,NA,NA,NA,NA,NA,NA
+2023_289387,8/15/2023,10:13,Bayview Avenue,Romfield Circuit,Markham,Y,Y,17,Male,N,N,N,N,N
+2023_308133,8/31/2023,9:49,Jane Street,Highway 407,Vaughan,Y,N,93,Male,N,N,N,N,N
+2023_307937,8/31/2023,4:38,Mount Albert Road,Centre Street,East Gwillimbury,Y,N,Adult,NA,N,N,Y,Y,N
+2023_320124,9/11/2023,0:05,Highway 7,Jane Street,Vaughan,Y,Y,55,Male,N,N,N,Y,N
+2023_338607,9/27/2023,17:37,Mullen Drive,Mullen Drive,Vaughan,Y,N,9,Female,N,Y,N,N,N
+2023_346748,10/5/2023,6:44,Confederation Parkway,Camden Drive,Vaughan,Y,NA,NA,NA,NA,NA,NA,NA,NA
+2023_356007,10/13/2023,19:23,Jane Street,Norwood Avenue,Vaughan,Y,N,17,Male,N,Y,N,N,N
+2023_374835,10/31/2023,10:09,Major MacKenzie Dr W,Vellore Park Avenue,Vaughan,Y,N,57,Female,N,Y,N,N,N
+2023_399013,11/23/2023,13:47,Green Lane East,2nd Concession Road,East Gwillimbury,Y,N,65,Female,N,N,N,N,N
+2023_416438,12/10/2023,15:47,McCowan Road,Bur Oak Avenue,Markham,Y,N,79,Female,N,Y,N,N,N
+2023_423082,12/17/2023,15:29,Woodland Acres Crescent,NA,Vaughan,N,N,80,Male,N,N,Y,N,N
+2024_12580,1/12/2024,18:01,Donald Cousens Parkway,Copper Creek Drive,Markham,Y,N,27,Male,N,N,N,N,N
+2024_18118,1/18/2024,7:23,Weston Road,Villa Royale Avenue,Vaughan,Y,N,15,Male,N,Y,N,N,N
+2024_20632,1/20/2024,10:21,Yonge Street,Kirk Drive,Markham,Y,N,Adult,Male,N,N,N,N,N
+2024_30395,1/30/2024,8:07,Highway 27,Major MacKenzie Dr W,Vaughan,Y,N,57,Male,N,N,N,N,N
+2024_51445,2/18/2024,5:30,8th Concession Road,King Road,King,Y,N,18,Female,N,N,Y,Y,N
+2024_65346,3/1/2024,18:46,Highway 404,Queensville Sideroad,East Gwillimbury,Y,N,Adult,Male,N,N,N,N,N
+2024_99064,4/1/2024,13:18,Jane Street,NA,King,N,Y,20,Male,N,N,N,N,N
+2024_102949,4/4/2024,21:22,Highway 7,Silver Linden Drive,Richmond Hill,Y,N,26,Male,N,Y,N,N,N
+2024_155828,5/21/2024,22:44,Martin Grove Road,Jackman Crescent,Vaughan,Y,N,16,Male,N,N,N,N,Y
+2024_175248,6/6/2024,18:55,Highway 7,Pine Valley Drive,Vaughan,Y,NA,NA,NA,NA,NA,NA,NA,NA
+2024_188015,6/17/2024,13:39,Don Mills Road,Simonston Boulevard,Markham,Y,N,33,Female,N,N,N,N,N
+2024_188563,6/17/2024,21:45,14th Avenue,Horstman Street,Markham,Y,Y,23,Female,N,N,N,N,N
+2024_190120,6/19/2024,7:56,Kleinburg Summit Way,Pierre Berton Blvd,Vaughan,Y,N,6,Male,N,Y,N,N,N
+2024_192981,6/21/2024,9:05,Mulock Drive,Sandford Street,Newmarket,Y,N,40,Male,N,N,N,N,N
+2024_225363,7/18/2024,17:42,Leslie Street,Gorham Street,Newmarket,Y,Y,31,Male,N,N,N,N,N
+2024_228488,7/21/2024,13:21,McCowan Road,Country Mile Lane,Georgina,Y,Y,34,Male,N,N,N,N,N
+2024_230409,7/23/2024,8:26,Davis Drive,Warden Avenue,East Gwillimbury,Y,N,79,Male,N,Y,N,N,N
+2024_252712,8/10/2024,19:44,11th Concession Road,17th Sideroad,King,Y,N,33,Male,N,N,Y,N,N
+2024_257270,8/14/2024,9:30,8th Concession Road,18th Sideroad,King,Y,N,16,Male,N,N,Y,N,N
+2024_260151,8/17/2024,8:29,Bayview Avenue,Bethesda Sideroad,Richmond Hill,Y,N,17,Male,N,N,Y,N,N
+2024_263307,8/20/2024,8:18,10th Concession Road,17th Sideroad,King,Y,N,54,Male,N,Y,N,N,N
+2024_287439,9/10/2024,9:13,Yonge Street,Wellington Street West,Aurora,Y,N,84,Male,N,Y,N,N,N
+2024_352668,11/5/2024,14:50,Yonge Street,Silverwood Avenue,Richmond Hill,Y,N,84,Female,N,Y,N,N,N
+2024_384824,12/5/2024,11:50,Kennedy Road,Bethesda Road,Whitchurch-Stouffville,Y,N,62,Male,N,N,N,N,N
+2024_394017,12/14/2024,12:25,Woodbine Avenue,Riveredge Drive,Georgina,Y,N,60+,Male,Y,Y,N,N,N
+2024_395162,12/15/2024,17:17,Jane Street,Auto Vaughan Road,Vaughan,Y,N,87,Female,N,N,N,N,N
+2024_398508,12/18/2024,23:25,Highway 27,NA,Vaughan,N,N,64,Male,N,N,N,N,N
+2024_406681,12/28/2024,3:05,9th Line,Hoover Park Drive,Whitchurch-Stouffville,Y,Y,21,Male,N,N,N,Y,N
+2025_13612,1/12/2025,13:17,Dufferin Street,Major MacKenzie Dr W,Vaughan,Y,N,80,Female,N,N,N,N,N
+2025_35158,1/30/2025,17:49,Kennedy Road,Gorvette Road,Markham,Y,NA,NA,NA,NA,NA,NA,NA,NA
+2025_49725,2/12/2025,21:56,Sugarforest Drive,NA,Vaughan,N,N,Youth,N,N,N,N,N,N
+2025_53858,2/17/2025,14:58,Reesor Road,NA,Markham,N,N,78,Male,N,Y,N,N,N
+2025_123955,4/18/2025,11:06,Dufferin Street,Major MacKenzie Dr W,Vaughan,Y,N,68,Female,N,Y,N,N,N
+2025_132946,4/26/2025,1:28,Highway 7,Martin Grove Road,Vaughan,Y,N,76,Male,N,Y,N,N,N
+2025_133978,4/26/2025,22:56,Jane Street,Kirby Road,Vaughan,Y,NA,NA,NA,NA,NA,NA,NA,NA
+2025_153762,5/13/2025,15:43,10th Concession Road,King Road,King,Y,Y,25,Male,N,N,N,N,N
+2025_160689,5/19/2025,16:05,Highway 27,King Vaughan Road,Vaughan,Y,NA,NA,NA,NA,NA,NA,NA,NA
+2025_166451,5/24/2025,2:39,Howard Avenue,NA,East Gwillimbury,N,N,23,Male,N,N,Y,Y,N
+2025_184610,6/7/2025,12:56,Jane Street,Ahmadiyya Avenue,Vaughan,Y,Y,Adult,Male,N,N,N,N,N
+2025_185865,6/8/2025,14:15,Jane Street,NA,King,N,N,Adult,Male,N,N,N,N,N
+2025_207570,6/25/2025,10:01,Davis Drive West,Dufferin Street,King,Y,N,56,Male,N,N,N,N,N
+2025_212206,6/28/2025,22:21,Weston Road,NA,Vaughan,N,N,48,Male,N,N,Y,N,N
+2025_241107,7/21/2025,8:02,Markham Road,Elson Street,Markham,Y,N,69,Female,N,Y,N,N,N
+2025_257569,8/2/2025,22:57,Highway 27,Rutherford Road,Vaughan,Y,N,69,Female,N,N,N,N,N
+2025_270947,8/13/2025,17:50,Woodbine Avenue,Ravenshoe Road,East Gwillimbury,Y,N,57,Male,N,Y,N,N,N
+2025_299136,9/7/2025,0:49,Highway 11,NA,East Gwillimbury,N,N,55,Male,N,N,N,Y,Y
+2025_318206,9/23/2025,18:05,Reesor Road,Major MacKenzie Dr E,Markham,Y,Y,19,Male,N,N,N,N,N
