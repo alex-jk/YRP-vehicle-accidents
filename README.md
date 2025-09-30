@@ -1,1 +1,1 @@
-Analysis of data from York Regional Police Road Safety Map on vehicle accidents. Dataset is from 2023 and beyond.
+Analysis of data from York Regional Police Road Safety Map on vehicle accidents. Dataset is from 2023 and beyond. Statistics on fatal accidents by gender, age, pedestrian and cyclist accidents, most dangerous roads / intersections.
