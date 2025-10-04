@@ -1,12 +1,12 @@
 ID,Date,Time,Main Street,Main Street 2,Municipality,Intersection,Motorcycle,Age,Gender,Mobility Scooter,Pedestrian,Single Vehicle,Night,Cyclist
 2023_16704,1/14/2023,14:28,McCowan Road,Bur Oak Avenue,Markham,Y,N,75,Female,N,N,N,N,N
 2023_35339,1/30/2023,6:30,9th Line,Bloomington Road,Whitchurch-Stouffville,Y,N,"Adult, Adult","Male, Male",N,N,N,N,N
-2023_87652,3/15/2023,12:49,Highway 48,NA,Whitchurch-Stouffville,N,N,35,Male,N,N,N,N,N
-2023_170962,5/19/2023,23:49,Major MacKenzie Dr W,Jane Street,Vaughan,Y,NA,NA,NA,NA,NA,NA,NA,NA
+2023_87652,3/15/2023,12:49,Highway 48,NA,Whitchurch-Stouffville,N,N,35,Male,N,Y,N,N,N
+2023_170962,5/19/2023,23:49,Major MacKenzie Dr W,Jane Street,Vaughan,Y,NA,NA,NA,NA,Y,NA,NA,NA
 2023_175551,5/23/2023,18:11,Pine Valley Drive,Major MacKenzie Dr W,Vaughan,Y,N,20,Male,N,Y,N,N,N
 2023_183025,5/29/2023,7:52,Jane Street,NA,King,Y,Y,Adult,Male,N,N,N,N,N
 2023_189685,6/1/2023,19:21,Pine Valley Drive,NA,Vaughan,N,N,72,Female,N,N,N,N,N
-2023_238781,7/5/2023,12:22,Dudley Avenue,NA,Markham,N,NA,NA,NA,NA,NA,NA,NA,NA
+2023_238781,7/5/2023,12:22,Dudley Avenue,NA,Markham,N,NA,NA,NA,NA,Y,NA,NA,NA
 2023_265277,7/25/2023,22:15,Highway 7,Thornhill Woods Drive,Vaughan,Y,Y,"45, 47","Male, Female",N,N,N,N,N
 2023_269592,7/29/2023,10:23,Keele Street,Sherwood Park Dr,Vaughan,Y,NA,NA,NA,NA,NA,NA,NA,NA
 2023_289387,8/15/2023,10:13,Bayview Avenue,Romfield Circuit,Markham,Y,Y,17,Male,N,N,N,N,N
@@ -19,8 +19,8 @@ ID,Date,Time,Main Street,Main Street 2,Municipality,Intersection,Motorcycle,Age,
 2023_374835,10/31/2023,10:09,Major MacKenzie Dr W,Vellore Park Avenue,Vaughan,Y,N,57,Female,N,Y,N,N,N
 2023_399013,11/23/2023,13:47,Green Lane East,2nd Concession Road,East Gwillimbury,Y,N,65,Female,N,N,N,N,N
 2023_416438,12/10/2023,15:47,McCowan Road,Bur Oak Avenue,Markham,Y,N,79,Female,N,Y,N,N,N
-2023_423082,12/17/2023,15:29,Woodland Acres Crescent,NA,Vaughan,N,N,80,Male,N,N,Y,N,N
-2024_12580,1/12/2024,18:01,Donald Cousens Parkway,Copper Creek Drive,Markham,Y,N,27,Male,N,N,N,N,N
+2023_423082,12/17/2023,15:29,Woodland Acres Crescent,NA,Vaughan,N,N,80,Male,N,Y,N,N,N
+2024_12580,1/12/2024,18:01,Donald Cousens Parkway,Copper Creek Drive,Markham,Y,N,27,Male,N,Y,N,N,N
 2024_18118,1/18/2024,7:23,Weston Road,Villa Royale Avenue,Vaughan,Y,N,15,Male,N,Y,N,N,N
 2024_20632,1/20/2024,10:21,Yonge Street,Kirk Drive,Markham,Y,N,Adult,Male,N,N,N,N,N
 2024_30395,1/30/2024,8:07,Highway 27,Major MacKenzie Dr W,Vaughan,Y,N,57,Male,N,N,N,N,N
@@ -49,7 +49,7 @@ ID,Date,Time,Main Street,Main Street 2,Municipality,Intersection,Motorcycle,Age,
 2024_398508,12/18/2024,23:25,Highway 27,NA,Vaughan,N,N,64,Male,N,N,N,N,N
 2024_406681,12/28/2024,3:05,9th Line,Hoover Park Drive,Whitchurch-Stouffville,Y,Y,21,Male,N,N,N,Y,N
 2025_13612,1/12/2025,13:17,Dufferin Street,Major MacKenzie Dr W,Vaughan,Y,N,80,Female,N,N,N,N,N
-2025_35158,1/30/2025,17:49,Kennedy Road,Gorvette Road,Markham,Y,NA,NA,NA,NA,NA,NA,NA,NA
+2025_35158,1/30/2025,17:49,Kennedy Road,Gorvette Road,Markham,Y,NA,NA,NA,NA,Y,NA,NA,NA
 2025_49725,2/12/2025,21:56,Sugarforest Drive,NA,Vaughan,N,N,Youth,N,N,N,N,N,N
 2025_53858,2/17/2025,14:58,Reesor Road,NA,Markham,N,N,78,Male,N,Y,N,N,N
 2025_123955,4/18/2025,11:06,Dufferin Street,Major MacKenzie Dr W,Vaughan,Y,N,68,Female,N,Y,N,N,N
