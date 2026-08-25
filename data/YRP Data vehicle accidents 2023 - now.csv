@@ -52,6 +52,7 @@ ID,Date,Time,Main Street,Main Street 2,Municipality,Intersection,Motorcycle,Age,
 2025_35158,1/30/2025,17:49,Kennedy Road,Gorvette Road,Markham,Y,NA,NA,NA,NA,Y,NA,NA,NA
 2025_49725,2/12/2025,21:56,Sugarforest Drive,NA,Vaughan,N,N,Youth,N,N,N,N,N,N
 2025_53858,2/17/2025,14:58,Reesor Road,NA,Markham,N,N,78,Male,N,Y,N,N,N
+2025_58682,2/21/2025,19:28,Simcoe Promenade,NA,Markham,N,NA,NA,NA,NA,N,NA,Y,N
 2025_123955,4/18/2025,11:06,Dufferin Street,Major MacKenzie Dr W,Vaughan,Y,N,68,Female,N,Y,N,N,N
 2025_132946,4/26/2025,1:28,Highway 7,Martin Grove Road,Vaughan,Y,N,76,Male,N,Y,N,N,N
 2025_133978,4/26/2025,22:56,Jane Street,Kirby Road,Vaughan,Y,NA,NA,NA,NA,NA,NA,NA,NA
@@ -64,8 +65,25 @@ ID,Date,Time,Main Street,Main Street 2,Municipality,Intersection,Motorcycle,Age,
 2025_212206,6/28/2025,22:21,Weston Road,NA,Vaughan,N,N,48,Male,N,N,Y,N,N
 2025_241107,7/21/2025,8:02,Markham Road,Elson Street,Markham,Y,N,69,Female,N,Y,N,N,N
 2025_257569,8/2/2025,22:57,Highway 27,Rutherford Road,Vaughan,Y,N,69,Female,N,N,N,N,N
-,8/4/2025,21:20,Highway 48,NA,Whitchurch-Stouffville,N,N,35,Male,N,N,N,N,N
+,8/3/2025,21:20,Highway 48,NA,Whitchurch-Stouffville,N,N,35,Male,N,N,N,N,N
 2025_270947,8/13/2025,17:50,Woodbine Avenue,Ravenshoe Road,East Gwillimbury,Y,N,57,Male,N,Y,N,N,N
 2025_299136,9/7/2025,0:49,Highway 11,NA,East Gwillimbury,N,N,55,Male,N,N,N,Y,Y
+2025_306113,9/13/2025,2:38,Metro Road,Lagoon Drive,Georgina,Y,N,17,Female,N,N,Y,Y,N
 2025_318206,9/23/2025,18:05,Reesor Road,Major MacKenzie Dr E,Markham,Y,Y,19,Male,N,N,N,N,N
 2025_322829,9/27/2025,16:34,Jane Street,Davis Drive,King,Y,N,27,Female,N,N,N,N,N
+2025_357297,10/27/2025,16:01,Holborn Road,NA,East Gwillimbury,N,NA,NA,NA,NA,N,NA,N,N
+2025_372472,11/10/2025,17:38,Reesor Road,16th Avenue,Markham,Y,N,61,Male,N,N,N,Y,N
+2025_374224,11/12/2025,9:22,Queen Street,Prospect Street,Newmarket,Y,NA,NA,NA,NA,N,Y,N,N
+2025_376675,11/14/2025,6:52,Warden Avenue,NA,Georgina,N,N,70,Male,N,Y,N,Y,N
+2025_391809,11/27/2025,19:22,Islington Avenue,Highway 7,Vaughan,Y,N,62,Male,N,Y,N,Y,N
+2025_403384,12/9/2025,4:06,Kennedy Road,Bloomington Road E,Whitchurch-Stouffville,Y,N,64,Male,N,Y,N,Y,N
+2025_413308,12/18/2025,16:10,Major Mackenzie Dr E,Leslie Street,Richmond Hill,Y,N,65,Male,N,Y,N,N,N
+2026_25888,1/22/2026,11:08,9th Line,Elgin Mills Road E,Markham,Y,N,75,Male,N,N,N,N,N
+2026_40911,2/3/2026,14:12,Woodbine Avenue,Highway 407,Markham,Y,N,NA,Female,N,N,N,N,N
+2026_56278,2/16/2026,2:29,Wellington Street,Goulding Avenue,Aurora,Y,N,NA,Female,N,Y,N,Y,N
+2026_66374,2/24/2026,15:37,Bloomington Road,Thornbay Drive,Whitchurch-Stouffville,Y,N,71,Female,N,N,N,N,N
+2026_80978,3/8/2026,12:58,Highway 7,Bayview Avenue,Richmond Hill,Y,Y,NA,NA,N,N,N,N,N
+2026_140789,4/26/2026,0:36,Leslie Street,Doane Road,East Gwillimbury,Y,N,Youth,NA,N,N,Y,Y,N
+2026_160869,5/12/2026,10:14,Dufferin Street,Caraway Drive,Vaughan,Y,Y,25,Male,N,N,N,N,N
+2026_171226,5/20/2026,18:31,Woodbine Avenue,John Street,Markham,Y,Y,30,Male,N,N,N,N,N
+2026_282832,8/16/2026,23:06,Weston Road,Rutherford Road,Vaughan,Y,Y,39,Male,N,N,N,Y,N
