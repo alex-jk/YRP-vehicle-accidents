@@ -21,8 +21,51 @@ Unlike the YRP vehicle accidents project, there's no single public feed or API f
 - `python scripts/fetch_bear_attacks.py` -- checks for new/missing Ontario bear-attack rows from Wikipedia.
 - `python scripts/fetch_google_search_candidates.py [start_year] [end_year]` -- searches Google (via SerpApi) for drowning/bear-attack/falling-tree news per year, staging results in `data/news_candidates.csv` for review.
 - `python scripts/classify_candidates.py` -- sends each row of `news_candidates.csv` to a cheap OpenAI model (gpt-4o-mini) to pre-label it Relevant/Not relevant, writing `data/news_candidates_labeled.csv` sorted so the Relevant rows are on top. This cuts down what you have to eyeball, but it's a pre-filter, not a verdict -- still open each Relevant row's actual link before adding it to the main CSV.
+- `python scripts/extract_incidents.py` -- turns the Relevant rows into a list of distinct incidents in `data/extracted_incidents.csv`. Stage 1 asks the model to cluster article snippets, in batches, into events. Stage 2 (`scripts/incident_merge.py`) deduplicates that output deterministically.
+- `python scripts/test_incident_merge.py` -- unit tests for the dedup rules. Standard library only, no API key, runs in well under a second. Run it after changing any threshold.
 
-All three scripts only stage candidates -- confirming scope and adding rows to `Ontario_camping_fatalities.csv` is a manual step.
+All four scripts only stage candidates -- confirming scope and adding rows to `Ontario_camping_fatalities.csv` is a manual step.
+
+## How deduplication decides
+
+The same death reaches us several times over: different outlets cover it, the search tool tags the articles with inconsistent years, and batching means stage 1 describes one event once per batch. Matching on identical URLs alone never caught any of that, so the rule is the combined evidence of source URLs *and* the incident description.
+
+Two incidents merge when the cause matches and any one of these holds:
+
+| basis | meaning |
+| --- | --- |
+| `shared-url` | they cite the same article, after stripping tracking parameters |
+| `name` | their victim names overlap |
+| `location+date` | same place, compatible dates |
+| `location+text` | same place, descriptions that say the same thing |
+| `location+age` | same place, same victim age |
+| `date+unverified-location` | the place name appears nowhere in its own sources, so it cannot be evidence of a *different* event; the dates agree to the day and both come from a source URL |
+| `adjudicated` | the optional LLM tie-breaker judged a near-miss pair to be one event |
+
+Any of those is vetoed by a hard contradiction: two different named victims, two different ages, or two dates that are each corroborated by a date in a source URL. That last veto is what keeps two separate drownings at one popular park apart.
+
+Dates found in a source URL (`/2005/09/08/`, or a trailing `2022-05-21` in the slug) are treated as trustworthy. The model's own `date` field is not, because it tends to echo the search tool's Year tag. Where the two disagree, the URL wins and the row is flagged.
+
+### Reading the output columns
+
+`merged_from` and `merge_basis` say how many raw rows folded into a row and why. `date_source` is `url-path` or `model`. `model_dates` keeps the original guesses so a re-run stays faithful. `flags` is the review queue:
+
+- `location-unconfirmed` -- the park name appears in none of the sources, so the model may have invented it. Observed repeatedly, including a bear attack on a northwestern Ontario island labelled as Algonquin.
+- `date-uncertain` -- the merged rows disagreed on the year and no source URL settles it.
+- `date-corrected-from-source` -- the date was overridden by a source URL.
+- `single-source` / `unresolvable-sources` -- one article, or nothing but opaque redirect links.
+
+The run also prints pairs that share a cause and a place but were deliberately left apart. Those are the judgement calls the rules refused to make, and they are worth a human's time first.
+
+`--remerge` redoes stage 2 alone against the existing `extracted_incidents.csv`, with no API key and no cost, so the thresholds in `incident_merge.py` can be tuned and re-checked. It is idempotent: a second pass collapses nothing further.
+
+### What it still cannot do
+
+- It cannot undo a bad stage-1 merge. If the model fused four unrelated deaths into one row, stage 2 sees one row. The `location-unconfirmed` flag is usually the tell.
+- One row means one incident, so an article reporting "two men drowned" is counted once.
+- A distinct death that no source names precisely can still be merged into a similar one at the same place. Where the sources are vague, the rules favour merging, because an over-merge shows up as a suspiciously rich source list while a false split hides.
+
+None of the counts here are verified. Treat `extracted_incidents.csv` as a review queue, not a result.
 
 ### Setup for the Google search script
 
