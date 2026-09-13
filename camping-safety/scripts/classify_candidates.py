@@ -36,19 +36,30 @@ IN_PATH = Path(__file__).resolve().parent.parent / "data" / "news_candidates.csv
 OUT_PATH = Path(__file__).resolve().parent.parent / "data" / "news_candidates_labeled.csv"
 
 SYSTEM_PROMPT = (
-    "You are screening Google search results for a dataset of Ontario fatalities. "
-    "A row is RELEVANT only if the title/snippet indicates a specific person died "
-    "(not just injured, not a statistics/report page, not an unrelated social post) "
-    "AND the death happened while camping, or at least within an Ontario provincial park. "
-    "If the text is ambiguous or doesn't clearly describe a death, mark it not relevant -- "
-    "a human will still check every relevant row's actual article before using it. "
-    "Respond with JSON only: {\"results\": [{\"index\": <int>, \"relevant\": true|false, \"reason\": \"<one short phrase>\"}]}"
+    "You are screening Google search results for a dataset of Ontario, Canada fatalities. "
+    "A row is RELEVANT only if ALL of these hold:\n"
+    "1. A specific person actually died -- not injured, not a 'survived'/'near-drowning' story, "
+    "not a statistics page, safety column, movie/book/review, or unrelated social post.\n"
+    "2. The location is CLEARLY Ontario, Canada. Many matches are from other Canadian provinces "
+    "(BC, Manitoba, Quebec) or US states (many US towns/parks share names with Ontario ones, e.g. "
+    "'Darlington', or a source like a Rochester/Cleveland/Boston TV station covering a US story). "
+    "If the province/state/country isn't clearly stated or is anywhere other than Ontario, Canada, "
+    "mark it NOT relevant -- do not assume Ontario just because the word 'Ontario' appears in the "
+    "search query context; it must appear in the actual title/snippet/source referring to the "
+    "incident's location.\n"
+    "3. It happened while camping, or at least within an Ontario provincial park (not a backyard "
+    "pool, private cottage, conservation area, or national park).\n"
+    "When genuinely uncertain on any point, mark it NOT relevant -- a human will still check every "
+    "relevant row's actual article before using it, so false negatives are cheap and false "
+    "positives waste their time.\n"
+    "Respond with JSON only: {\"results\": [{\"index\": <int>, \"relevant\": true|false, "
+    "\"location\": \"<what location you inferred, or 'unclear'>\", \"reason\": \"<one short phrase>\"}]}"
 )
 
 
 def classify_batch(api_key, batch):
     lines = [
-        f"{row['index']}: [{row['Year']} | {row['Cause']}] {row['Title']} -- {row['Snippet']}"
+        f"{row['index']}: [{row['Year']} | {row['Cause']} | {row['Source']}] {row['Title']} -- {row['Snippet']}"
         for row in batch
     ]
     resp = requests.post(
@@ -91,13 +102,14 @@ def main():
         for row in batch:
             label = labels.get(row["index"])
             row["Relevant"] = "Yes" if label and label.get("relevant") else "No"
+            row["Location"] = label.get("location", "") if label else ""
             row["Reason"] = label.get("reason", "") if label else "classification failed"
 
         print(f"{start + len(batch)}/{len(rows)} classified")
 
     rows.sort(key=lambda r: r["Relevant"] != "Yes")
 
-    fieldnames = ["Year", "Cause", "Title", "Source", "URL", "Snippet", "Relevant", "Reason"]
+    fieldnames = ["Year", "Cause", "Title", "Source", "URL", "Snippet", "Relevant", "Location", "Reason"]
     with open(OUT_PATH, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
