@@ -16,6 +16,30 @@ Unlike the YRP vehicle accidents project, there's no single public feed or API f
 
 `ProvincialPark` is blank for cases that only meet the "camping" half of the scope (e.g. camping outside a park). `Source` should cite where the row came from (news outlet, Wikipedia, inquest verdict, FOI response) so entries can be checked later.
 
+## Verified results
+
+`data/Ontario_park_fatalities_verified.csv` is the checked output. Every row was confirmed by opening sources for the incident, and one row is one death, with `incident_id` grouping deaths that happened in the same event. `data/verification_log.csv` records what happened to each of the 25 rows the pipeline produced, so any figure here can be traced back.
+
+In Ontario provincial parks:
+
+| Cause | Incidents | Deaths |
+| --- | --- | --- |
+| Bear attack | 2 | 3 |
+| Drowning | 13 | 13 |
+| Falling tree | 1 | 2 |
+
+Those span 1991-10-11 to 2026-05-18. Dropping the 1991 Algonquin case, which predates the 2005-onward target window and is kept only as a reference, leaves 2005-09-06 to 2026-05-18 with one bear attack, thirteen drownings and one falling-tree event.
+
+A further six deaths happened while camping outside a provincial park, between 2018-07-01 and 2025-06-22: four drownings at private campgrounds and resorts, and two falling-tree deaths, one at Pinehurst Lake Conservation Area and one at a Mallorytown KOA.
+
+### What the verification changed
+
+Of the 25 extracted rows, only four survived unchanged. Nine carried the wrong date, one by seven years and one by eight. Two described deaths that never happened: a falling-tree fatality in Algonquin sourced from an article about an unoccupied tent crushed at Pinery, and another with no supporting report at all. Two more had invented park names covering real deaths elsewhere, and one attributed a drowning to a victim from a different incident in a different town. Four were real but outside scope, including the 2019 bear attack that the pipeline labelled Algonquin, which actually killed a woman at a private cottage on an island in Rainy Lake. One row hid two separate deaths at North Beach on the same day, and one could not be verified at all.
+
+### What this file is not
+
+It is not a census. Verification of the North Beach cluster turned up two further provincial-park drownings in 2020 that the search had missed entirely, and both are included here, which is evidence that the keyword search under-reports rather than over-reports. The news search only ever covered 2018 through 2026, so incidents before 2018 appear only when something else led to them. A 1978 fatal bear attack in Algonquin is known to exist and is not yet in this file. Treat these counts as a verified floor, not a total.
+
 ## Updating the data
 
 - `python scripts/fetch_bear_attacks.py` -- checks for new/missing Ontario bear-attack rows from Wikipedia.
