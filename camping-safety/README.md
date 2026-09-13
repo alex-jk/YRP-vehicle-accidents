@@ -48,6 +48,8 @@ Dates found in a source URL (`/2005/09/08/`, or a trailing `2022-05-21` in the s
 
 ### Reading the output columns
 
+`park_scope` is `provincial-park`, `national-park`, `other` or `unknown`, derived from the claimed location alone. It does not verify the place is real, so read it next to `location-unconfirmed`: the invented "Lake Erie Provincial Park" scores as a park and is not one.
+
 `merged_from` and `merge_basis` say how many raw rows folded into a row and why. `date_source` is `url-path` or `model`. `model_dates` keeps the original guesses so a re-run stays faithful. `flags` is the review queue:
 
 - `location-unconfirmed` -- the park name appears in none of the sources, so the model may have invented it. Observed repeatedly, including a bear attack on a northwestern Ontario island labelled as Algonquin.

@@ -49,7 +49,7 @@ SEED_PATH = BASE / "data" / "Ontario_camping_fatalities.csv"
 OUT_PATH = BASE / "data" / "extracted_incidents.csv"
 
 FIELDNAMES = [
-    "date", "date_source", "cause", "location", "names", "age_gender", "summary",
+    "date", "date_source", "cause", "location", "park_scope", "names", "age_gender", "summary",
     "source_count", "source_urls", "merged_from", "merge_basis", "flags",
     "possible_duplicate_of_seed", "model_dates",
 ]
@@ -179,6 +179,7 @@ def write_output(merged, seed_rows, evidence_by_url):
                 "date_source": rec["date_source"],
                 "cause": rec["cause"],
                 "location": rec["location"],
+                "park_scope": im.park_scope(rec),
                 "names": rec["names"],
                 "age_gender": rec["age_gender"],
                 "summary": rec["summary"],
@@ -206,6 +207,14 @@ def report(merged, stats, pairs, evidence_by_url):
         print("\nRows needing attention:")
         for flag, n in sorted(counts.items(), key=lambda kv: -kv[1]):
             print(f"  {n:3d}  {flag}")
+
+    scope = {}
+    for rec in merged:
+        key = (im.park_scope(rec), rec["cause"])
+        scope[key] = scope.get(key, 0) + 1
+    print("\nBy scope and cause (claimed location, not verified):")
+    for (where, cause), n in sorted(scope.items()):
+        print(f"  {n:3d}  {cause} in {where}")
 
     if pairs:
         print(f"\n{len(pairs)} pair(s) share a cause and place but were left separate:")

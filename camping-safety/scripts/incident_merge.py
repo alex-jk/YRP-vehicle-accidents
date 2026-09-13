@@ -500,6 +500,23 @@ def flags_for(record, evidence=""):
     return out
 
 
+def park_scope(record):
+    """Whether the record's own location names an Ontario provincial park.
+
+    This reads the claimed location only. It does not verify that the place is
+    real or that the model got it right, so read it alongside the
+    location-unconfirmed flag: "Lake Erie Provincial Park" scores as a park
+    here and is not one."""
+    loc = (record.get("location") or "").lower()
+    if "provincial park" in loc:
+        return "provincial-park"
+    if "national park" in loc:
+        return "national-park"
+    if not loc.strip():
+        return "unknown"
+    return "other"
+
+
 def is_likely_seed_duplicate(incident, seed_rows):
     """Flag incidents that look like a row already in the hand-checked seed CSV.
 

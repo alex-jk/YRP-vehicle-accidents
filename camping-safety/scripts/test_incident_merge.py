@@ -327,6 +327,27 @@ class TestCombine(unittest.TestCase):
         self.assertEqual(merged[0]["location"], "Rainy Lake")
 
 
+class TestParkScope(unittest.TestCase):
+    def test_provincial_park(self):
+        self.assertEqual(im.park_scope({"location": "Sandbanks Provincial Park"}), "provincial-park")
+
+    def test_national_park_is_separated_out(self):
+        self.assertEqual(im.park_scope({"location": "Bruce Peninsula National Park"}), "national-park")
+
+    def test_campground_is_other(self):
+        self.assertEqual(im.park_scope({"location": "Mallorytown"}), "other")
+
+    def test_blank_location(self):
+        self.assertEqual(im.park_scope({"location": ""}), "unknown")
+
+    def test_scope_reads_the_claim_not_the_truth(self):
+        """An invented park still scores as a park; the flag is what warns you."""
+        rec = {"location": "Lake Erie Provincial Park",
+               "_urls": ["https://lfpress.com/news/local-news/man-dies-diving-from-boat-lake-huron"]}
+        self.assertEqual(im.park_scope(rec), "provincial-park")
+        self.assertFalse(im.location_confirmed(rec))
+
+
 class TestSeedDuplicate(unittest.TestCase):
     SEED = [
         {"Date": "1991-10-11", "Location": "Bates Island, Algonquin Provincial Park",
